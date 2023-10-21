@@ -1,0 +1,550 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+body
+{
+    height: 3000px;
+}
+.header
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    height: 60px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.img1
+{
+    position: relative;
+}
+.un-listed li
+{
+   list-style-type: none;
+}
+.un-listed li a
+{
+    font-size: 22px;
+    font-weight: 900;
+    z-index: 124;
+    color: white;
+}
+.dropdown a
+{
+    text-decoration: none;
+    color: black;
+}
+.dropdown
+{
+    position: relative;
+}
+.dropdown-menu
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    /* border: 2px solid black; */
+    left: -100px;
+    top: 40px;
+    height: 220px;
+    width: 500px;
+    background-color: white;
+    position: absolute;
+    z-index: 123;
+    transition: 1s;
+    opacity: 0;
+    transform: scale3d(0,0,1);
+    visibility: hidden;
+}
+.dropdown:hover .dropdown-menu
+{
+opacity: 1;
+visibility: visible;
+transform: scale3d(1,1,1);
+}
+.dropdown-menu::after
+{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    transition: 1s;
+}
+.dropdown:hover .dropdown-menu::after
+{
+    width: 100%;
+    height: 100%;
+}
+.list
+{
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.list .tr1
+{
+    position: relative;
+    margin-right: 35px;
+}
+.list .tr1 a
+{
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(10, 10, 10);
+    font-size: 17px;
+}
+.list .tr1::after
+{
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 0 2px;
+    border-color: grey;
+    left: -10px;
+    top:-4px;
+    width: 120%;
+    height: 137%;
+    transition: 0.4s;
+    transform: scale3d(1,0,1);
+}
+.list .tr1:hover::after
+{
+    transform: scale3d(1,1,1);
+}
+.list .tr1::before
+{
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 2px 0;
+    border-color: grey;
+    top:-5px;
+    left: -9px;
+    width: 0;
+    height: 120%;
+    transition: 0.4s;
+    /* transform: scale3d(0,1,1); */
+}
+.list .tr1:hover::before
+{
+    width: 123%;
+    /* transform: scale3d(1,1,1); */
+}
+.icons
+{
+    margin-top: 15px;
+}
+.icons i
+{
+    display: block;
+    font-size: 32px;
+    float: left;
+    margin-left: 7px;
+}
+.zero,.your-bag,.title1,.section2,.main-content,.buy,.description,.section5,.section6
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zero
+{
+    width: 20px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.527);
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.your-bag
+{
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+.section1
+{
+    margin: auto;
+    width: 80%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../picture//pexels-photo-7534555.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.words
+{
+    width: 100%;
+    height: 130px;
+    margin-top:150px;
+    text-align: center;
+}
+.words strong
+{
+    font-size: 75px;
+    color: white;
+}
+.shop-now
+{
+    position: relative;
+    width: 120px;
+    height: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 42%;
+    overflow: hidden;
+}
+.shop-now::after
+{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    left: -0px;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.435);
+}
+.shop-now:hover::after
+{
+    width: 100%;
+}
+.shop-now strong
+{
+    position: relative;
+    top: 5px;
+    color: white;
+    z-index: 12;
+}
+.title1
+{
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 900;
+    flex-direction: column;
+}
+.hr1
+{
+    margin: auto;
+    width: 10%;
+    height: 3px;
+    transition: 1s;
+}
+.title1:hover .hr1
+{
+    width: 20%;
+}
+.section2
+{
+    width: 80%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.section2-temp
+{
+    width: 23%;
+    height: 380px;
+    position: relative;
+}
+.section2-temp-content
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width: 85%;
+}
+.buy
+{
+   width: 15%;
+   height: 40px;
+   font-size: 30px;
+   transform: scale(0); 
+   transition: 1s;  
+}
+.section2-temp:hover .buy
+{
+    transform: scale(1);
+}
+.section3
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.section3-main
+{
+    width: 45%;
+    height: 260px;
+    display:flex;
+    flex-direction: column;    
+}
+.section3-main-title
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    height: 20%;
+    font-size: 23px;
+}
+.section3-main-para
+{
+   /* height: 70%; */
+   margin-top: 20px;
+   font-size: 20px;
+}
+.hr-3
+{
+    width: 50%;
+    height: 10%;
+    align-self:flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.hr-3 hr
+{
+    width: 20%;
+}
+.discount-1
+{
+    width: 25%;
+    height: 260px;
+    background-image: url(../picture/pexels-photo-1571458.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    transform: scale(1);
+}
+.rt
+{
+    background-image: url(../picture2/modern-living-room-design-by-decorilla-designer-lauren-a-1024x576.jpg);
+}
+.discount-1-content
+{
+    margin-top: 30px;
+    font-size: 22px;
+    color: white;
+}
+.discount-1:hover
+{
+    transform: scale(1.1);
+}
+.section4
+{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+.section4-temp1
+{
+   width: 18%;
+   height: 140px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   text-align: center;
+   overflow: hidden;
+   position: relative;
+   /* border: 1px solid black; */
+}
+.ico
+{
+    position:relative;
+    top:10px;
+    color: rgb(30,48,80);
+}
+.section4-temp1-icons
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+   margin-bottom:30px;
+   color:rgba(30,48,80,0.5);
+   /* border: 1px solid black; */
+}
+.section4-temp1-words
+{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    margin-top:50px;
+    /* margin-top: 80px; */
+    background-color:white;
+    /* border: 1px solid black; */
+}
+.section4-temp1 i
+{
+    font-size: 45px;
+    transform:translateY(0px);
+    transition: 0.5s;
+}
+.section4-temp1:hover i
+{
+    transform:translateY(-55px);
+}
+.section4-temp-line
+{
+   width: 1px; 
+   height: 100px;
+   background-color: black;    
+}
+.description
+{
+    margin: auto;
+    margin-top: 10px;
+    width: 40%;
+    justify-content: space-evenly;
+    font-size: 22px;
+}
+.section5
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+.section5-temp-main
+{
+    position: relative;
+    width: 30%;
+}
+.section5-temp
+{
+    width: 100%;
+    border: 1px solid black;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+.section5-temp-content
+{
+    display: flex;
+    flex-direction: column;
+}
+.stars i
+{
+    color: yellow;
+}
+.section5-temp-overlay
+{
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    transform: scaleX(0);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i1
+{
+    background-image: url(../picture4/R.jpg);
+}
+.i2
+{
+    background: url(../picture4/9cd045f4f6430bdfec630f41602a140d.jpg) no-repeat center;
+    background-size: cover;
+}
+.i3
+{
+    background-image: url(../picture2/R.jpg);
+}
+.i4
+{
+    background: url(../picture3/Affordable-interior-design-and-decorating-ideas-by-Alexa-H.webp) no-repeat center;
+    background-size: cover;
+}
+.i5
+{
+    background-image: url(../picture3/rustic-kitchen-design-by-decorilla-designer-mary-l.webp);
+    background-size: cover;
+}
+.i6
+{
+    background: url(../picture/R.jpg) no-repeat center;
+    background-size: cover;
+}
+.i7
+{
+    background: url(../picture3/Affordable-interior-design-on-a-budget-by-Caity-H.webp) no-repeat center;
+    background-size: cover;
+}
+.i8
+{
+    background: url(../picture3/Budget-interior-design-ideas-by-Decorilla-designer-Dina-H..webp) no-repeat center;
+    background-size: cover;
+}
+.i9
+{
+    background: url(../picture2/modern-home-interior-design-with-rustic-farmhouse-features.webp) no-repeat center;
+    background-size: cover;
+}
+.i10
+{
+    background: url(../picture3/Transitional-living-room-by-Decorilla-affordable-interior-designer-Meric-S..webp) no-repeat center;
+    background-size: cover;
+}
+.i11
+{
+    background: url(../picture3/Affordable-decorating-and-bedroom-interior-design-ideas-by-Darya-N.webp) no-repeat center;
+    background-size: cover;
+}
+.i12
+{
+    background: url(../picture3/Budget-and-affordable-interior-design-ideas-by-Jessica-S.webp) no-repeat center;
+    background-size: cover;
+}
+.section5-temp-main:hover .section5-temp-overlay
+{
+    transform: scaleX(1);
+}
+.section5-icons i
+{
+    display: block;
+    font-size: 32px;
+    float: left;
+    margin-left: 10px;
+    color: rgb(48, 47, 47);
+}
+.section6
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-around;
+}
